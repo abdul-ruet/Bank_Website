@@ -40,7 +40,7 @@
         <div class="col-md-4">
           <div class="deposit status">
             <h5>Deposit</h5>
-            <h2>$00</h2>
+            <h2>$ <span id="current-deposit">00</span></h2>
           </div>
         </div>
         <div class="col-md-4">
@@ -52,7 +52,7 @@
         <div class="col-md-4">
           <div class="balance status">
             <h5>Balance</h5>
-            <h2>$1240</h2>
+            <h2>$ <span id="current-balance">1240</span></h2>
           </div>
         </div>
       </div>
@@ -61,12 +61,13 @@
           <div class="submit-area">
             <h4>Deposit</h4>
             <input
+              id="depositAmount"
               type="text"
               class="form-control"
               placeholder="Dollar amount you want to deposit"
             />
             <br />
-            <button class="btn-success">deposit</button>
+            <button id="addDeposit" class="btn-success">deposit</button>
           </div>
         </div>
         <div class="col-md-6">
@@ -84,14 +85,6 @@
       </div>
     </div>
 
-    <script>
-      const loginBtn = document.getElementById("login");
-      loginBtn.addEventListener("click", function () {
-        const loginArea = document.getElementById("login-area");
-        loginArea.style.display = "none";
-        const transactionArea = document.getElementById("transaction-area");
-        transactionArea.style.display = "block";
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
